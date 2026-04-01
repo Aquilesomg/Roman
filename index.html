@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roman Tech | Tecnología España</title>
+    <meta name="description" content="Las últimas noticias de tecnología, innovación y ciencia en España. PWA moderna y rápida.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#c60b1e">
+    <link rel="icon" href="icon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="app-header">
+        <div class="logo">
+            <span class="logo-icon">🇪🇸</span>
+            <h1>Roman<span>Tech</span></h1>
+        </div>
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Buscar tecnología...">
+            <button id="search-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            </button>
+        </div>
+    </header>
+
+    <nav class="category-nav">
+        <button class="nav-item active" data-view="tech">Tecnología</button>
+        <button class="nav-item" data-view="ai">IA & Futuro</button>
+        <button class="nav-item" data-view="startups">Startups</button>
+        <button class="nav-item" data-view="gadgets">Gadgets</button>
+        <button class="nav-item" data-view="cyber">Ciberseguridad</button>
+        <button class="nav-item" data-view="gaming">Gaming</button>
+    </nav>
+
+    <section class="advanced-filters">
+        <div class="filter-group">
+            <label for="lang-select">Idioma:</label>
+            <select id="lang-select">
+                <option value="es" selected>Español</option>
+                <option value="en">Inglés</option>
+                <option value="fr">Francés</option>
+            </select>
+        </div>
+        <div class="filter-group">
+            <label for="date-select">Desde:</label>
+            <input type="date" id="date-select">
+        </div>
+        <button id="apply-filters" class="apply-btn">Refinar Resultados</button>
+    </section>
+
+    <main class="container">
+        <div class="view-header">
+            <h2 id="current-view-title">Tecnología en España</h2>
+            <div id="loading-indicator" class="hidden">
+                <div class="spinner"></div>
+            </div>
+        </div>
+
+        <section id="results-container" class="results-grid">
+            <!-- Articles will be injected here -->
+        </section>
+
+        <div class="pagination" id="pagination-controls" style="display: none;">
+            <button id="prev-btn" class="pagination-btn" disabled>Anterior</button>
+            <span id="page-info">Página 1</span>
+            <button id="next-btn" class="pagination-btn">Siguiente</button>
+        </div>
+    </main>
+
+    <!-- Modal for details -->
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <button id="close-modal" class="close-btn">&times;</button>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
