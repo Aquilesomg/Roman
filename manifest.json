@@ -4,8 +4,8 @@
     "description": "Noticias de tecnología e innovación en España",
     "start_url": "./index.html",
     "display": "standalone",
-    "background_color": "#0a0a0f",
-    "theme_color": "#c60b1e",
+    "background_color": "#ffffff",
+    "theme_color": "#ffffff",
     "orientation": "portrait-primary",
     "icons": [
         {
